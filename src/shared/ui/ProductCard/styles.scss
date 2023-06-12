@@ -1,0 +1,32 @@
+.product-card {
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  padding: 133px 40px 28px 40px;
+  width: 270px;
+  position: relative;
+  &__image-wrap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-30.35%) translateX(-50%);
+    border-radius: 50%;
+
+  }
+  &__image {
+    object-fit: cover;
+  }
+  &__label {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  &__text {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}

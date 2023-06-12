@@ -1,0 +1,13 @@
+.post-card {
+  background: url("../../../../public/images/backgrounds/background01.jpg") no-repeat ;
+  background-size: cover;
+  border-radius: 16px;
+  padding: 32px;
+  &__body {
+    max-width: 303px;
+  }
+
+  &__info {
+    margin-bottom: 12px;
+  }
+}

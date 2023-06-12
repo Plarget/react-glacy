@@ -1,0 +1,32 @@
+.product-banner-card {
+  position: relative;
+  scale: 1;
+  transition: 0.3s;
+  &::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 61.53%;
+    border-radius: 50%;
+    background-color: #FFCBD8;
+
+  }
+
+  &__image {
+    height: 100%;
+  }
+}
+
+.swiper-slide {
+  display: inline-flex;
+}
+.swiper-slide:not(.swiper-slide-active) {
+
+  & .product-card {
+    scale: 0.3;
+  }
+}

@@ -1,0 +1,19 @@
+.preview {
+  padding-top: 24px;
+  &__body {
+    display: flex;
+    column-gap: 27px;
+  }
+
+  &__about {
+    max-width: 429px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    margin-bottom: 48px;
+  }
+
+}

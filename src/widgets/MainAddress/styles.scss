@@ -1,0 +1,11 @@
+.address {
+  &__body {
+    border-radius: 16px;
+    padding: 64px;
+    background: url("../../../public/images/backgrounds/background03.jpg") no-repeat;
+    background-size: cover;
+    @media (max-width: 575px) {
+      padding: 20px;
+    }
+  }
+}

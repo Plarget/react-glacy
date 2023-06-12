@@ -1,0 +1,42 @@
+.tooltip {
+  position: relative;
+  &:not(.is-active) &__body {
+    visibility: hidden;
+    opacity: 0;
+    bottom: -25px;
+   }
+
+  &.is-active > button {
+    background-color: #FF4A78;
+    color: #ffffff;
+    & svg path {
+      fill: #ffffff;
+
+    }
+
+  }
+  &__body {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    transform: translate(0,100%);
+    opacity: 1;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 48px;
+    transition: 0.3s;
+    &--box-shadow {
+      box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+    }
+    &--small {
+      padding: 24px 16px;
+    }
+    &--very-small {
+      padding: 16px;
+      width: 135px;
+      left: 0;
+    }
+  }
+
+}

@@ -1,0 +1,16 @@
+.news {
+  &__body {
+    display: flex;
+    gap: 30px;
+    @media (max-width: 1024px) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns:  minmax(auto,570px) ;
+ 
+    }
+  }
+
+  &__item {
+    flex: 1 1 50%;
+  }
+}

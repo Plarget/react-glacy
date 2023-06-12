@@ -1,0 +1,39 @@
+.info {
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__wrapper {
+    background: url("../../../public/images/borders/borders01.jpg") no-repeat;
+    background-size: cover;
+     border-radius: 16px;
+    padding: 24px;
+  }
+  &__body {
+    background-color: #ffffff;
+    padding: 56px 40px;
+    border-radius: 16px;
+    @media (max-width: 545px) {
+      padding: 35px 15px;
+
+    }
+    }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 31px;
+    row-gap: 40px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    flex: 1 1 40%;
+  }
+}

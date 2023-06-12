@@ -1,0 +1,23 @@
+.address__window {
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  padding: 40px;
+  max-width: 343px;
+
+  &-body {
+    margin-bottom: 28px;
+  }
+  &-text {
+    margin-bottom: 12px;
+  }
+
+  &-address {
+    margin-bottom: 24px;
+  }
+  @media (max-width: 575px) {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
