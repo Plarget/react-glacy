@@ -1,5 +1,32 @@
-.header__mobile {
+.mobile-menu {
+  position: fixed;
+  padding-top: 70px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: pink;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  justify-content: center;
+  overflow-y: auto;
+
+  &:not(.is-open) {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  &__link {
+
+  }
 }

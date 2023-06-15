@@ -1,20 +1,26 @@
 import { useEffect } from 'react'
 
 
-const useClickOutside = ( ref, callback ) => {
-  const onClick = ( { target } ) => {
-    if ( ref.current && !ref.current.contains( target ) ) {
+const useClickOutside = (ref, callback) => {
+
+  const onClick = (event) => {
+    if (!ref.current) return
+
+    const path = event.composedPath()
+    const isClickOutside = !path.includes(ref.current)
+
+    if (isClickOutside) {
       callback()
     }
   }
 
-  useEffect( () => {
-    document.addEventListener( 'click', onClick )
+  useEffect(() => {
+    document.addEventListener('click', onClick)
 
     return () => {
-      document.removeEventListener( 'click', onClick )
+      document.removeEventListener('click', onClick)
     }
-  } )
+  })
 }
 
 export default useClickOutside

@@ -1,12 +1,12 @@
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 
 
-const useToggle = ( defaultValue ) => {
-  const [ value, setValue ] = useState( defaultValue )
+const useToggle = (defaultValue) => {
+  const [value, setValue] = useState(defaultValue)
 
-  const toggle =  () => setValue( x => !x )
+  const toggle = () => setValue(x => !x)
 
-  return [ value, toggle, setValue ]
+  return [value, toggle, setValue]
 }
 
 export default useToggle

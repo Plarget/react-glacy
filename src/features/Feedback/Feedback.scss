@@ -1,0 +1,43 @@
+.feedback-form {
+  width: 442px;
+
+  &__label {
+    margin-bottom: 32px;
+    @media (max-width: 600px) {
+      text-align: center;
+    }
+  }
+
+  &__full-name {
+    margin-bottom: 16px;
+  }
+
+  &__email {
+    margin-bottom: 16px;
+  }
+
+  &__feedback {
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    height: 149px;
+  }
+
+  &__textarea {
+    height: 149px;
+
+  }
+
+  &__error {
+    padding-top: 8px;
+  }
+
+  &__wrapper-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}

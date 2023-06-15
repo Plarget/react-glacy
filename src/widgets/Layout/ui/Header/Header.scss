@@ -5,7 +5,14 @@
     display: flex;
     column-gap: 32px;
     align-items: center;
+    @media (max-width: 1124px) {
+      column-gap: 12px;
+    }
+    @media (max-width: 1024px) {
+      justify-content: space-between;
+    }
   }
+
 
   @media (max-width: 1024px) {
     z-index: 2;
@@ -17,39 +24,3 @@
   }
 }
 
-.mobile-menu {
-  position: fixed;
-  padding-top: 70px;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100vw;
-  height: 100vh;
-  background-color: pink;
-  display: flex;
-
-  justify-content: center;
-  overflow-y: auto;
-
-  &:not(.is-open) {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 20px;
-  }
-
-  &__link {
-
-  }
-}
-
-.header__burger-button {
-  height: 60px;
-  z-index: 4;
-}

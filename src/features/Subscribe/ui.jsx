@@ -2,20 +2,21 @@ import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import Button from '@shared/ui/Button/ui'
 import { yupResolver } from '@hookform/resolvers/yup'
+import Input from '@shared/ui/Input'
 import './Subscribe.scss'
 
 
-const sсhema = yup.object( {
-  email: yup.string().required( 'Заполните поле' ).email( 'Вы ввели неправильный email' ),
-} )
-const Subscribe = ( props ) => {
+const sсhema = yup.object({
+  email: yup.string().required('Заполните поле').email('Вы ввели неправильный email'),
+})
+const Subscribe = (props) => {
   const { className } = props
-  const { register, handleSubmit, formState: { errors }, reset } = useForm( {
-    resolver: yupResolver( sсhema )
-  } )
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    resolver: yupResolver(sсhema)
+  })
 
-  const onSubmit = ( data ) => {
-    console.log( data )
+  const onSubmit = (data) => {
+    console.log(data)
     reset()
   }
 
@@ -30,16 +31,16 @@ const Subscribe = ( props ) => {
             Честно =)
           </p>
         </div>
-        <form className="subscribe__form" onSubmit={ handleSubmit( onSubmit ) } noValidate>
-          <label className="subscribe__label">
-            <input
-              className="subscribe__input input"
-              { ...register( 'email' ) }
-              placeholder="email@example.com"
-              type="email"
-            />
-            { errors?.email?.message && <div className="subscribe__error error">{ errors?.email?.message }</div> }
-          </label>
+        <form className="subscribe__form" onSubmit={ handleSubmit(onSubmit) } noValidate>
+          <Input
+            className="subscribe__input"
+            register={ register }
+            registerName="email"
+            type="email"
+            placeholder="email@example.com"
+            error={ errors?.email?.message }
+            hasError
+          />
           <Button className="subscribe__button button--red">Отправить</Button>
         </form>
       </div>

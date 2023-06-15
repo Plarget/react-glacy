@@ -16,9 +16,7 @@ const Button = ( props ) => {
       { ...rest }
       className={ classNames( 'button', className ) }
     >
-      { iconBefore }
       { children }
-      { iconAfter }
     </button> )
 }
 

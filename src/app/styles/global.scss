@@ -1,10 +1,11 @@
 @import 'src/app/styles/fonts';
 @import 'reset';
 
-html,body,#root,.App {
+html, body, #root, .App {
   height: 100%;
   width: 100%;
 }
+
 body {
   color: #2D3440;
   background-color: #FEAFC3;
@@ -12,17 +13,19 @@ body {
 
 
   &.body--blue {
-    background-color:  #69A9FF;
+    background-color: #69A9FF;
   }
 }
 
 .App {
   display: flex;
   flex-direction: column;
+
   & main {
     flex-grow: 1;
   }
 }
+
 a {
   color: #2D3440;
 }
@@ -31,31 +34,28 @@ a {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+
   &--small {
     font-size: 20px;
   }
+
   &--very-small {
     font-size: 18px;
     line-height: 22px;
   }
+
   &--tiny {
     font-size: 16px;
     line-height: 20px;
   }
 }
 
-.input {
-  border: 1px solid #B9B9B9;
-  border-radius: 4px;
-  padding: 16px 14px;
-  width: 100%;
-  height: 48px;
-}
 
 .title {
   font-size: 32px;
   font-weight: 900;
   line-height: 46px;
+
   &--big {
     font-size: 36px;
     @media (max-width: 545px) {
@@ -74,17 +74,15 @@ a {
 .text {
   font-size: 16px;
   line-height: 22px;
+
   &--big {
     font-size: 18px;
     line-height: 24px;
   }
+
   &--gray {
     color: #565C66;
   }
-}
-
-.error {
-  color: red;
 }
 
 

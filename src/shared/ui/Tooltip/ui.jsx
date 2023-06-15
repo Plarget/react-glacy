@@ -5,28 +5,28 @@ import useClickOutside from '@shared/hooks/useClickOutside'
 import useToggle from '@shared/hooks/useToggle'
 
 
-const Tooltip = ( props ) => {
+const Tooltip = (props) => {
   const {
     renderTriggerComponent,
     children,
     className,
   } = props
-  const ref = useRef( null )
-  const [ isTooltipOpened, toggleTooltipOpened, setTooltipOpened ] = useToggle( false )
-  useClickOutside( ref, () => {
+  const ref = useRef(null)
+  const [isTooltipOpened, toggleTooltipOpened, setTooltipOpened] = useToggle(false)
+  useClickOutside(ref, () => {
     setTooltipOpened(false)
-  } )
+  })
 
   return (
     <div
       className={ classNames(
         'tooltip',
-        { 'is-active': isTooltipOpened } ) }
+        { 'is-active': isTooltipOpened }) }
       ref={ ref }
     >
-      { renderTriggerComponent( { onClick: toggleTooltipOpened } ) }
+      { renderTriggerComponent({ onClick: toggleTooltipOpened }) }
       <div
-        className={ classNames( 'tooltip__body', className ) }
+        className={ classNames('tooltip__body', className) }
       >
         { children }
       </div>

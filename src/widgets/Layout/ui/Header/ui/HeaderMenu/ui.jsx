@@ -1,34 +1,39 @@
 import Tooltip from '@shared/ui/Tooltip/ui'
 import Button from '@shared/ui/Button'
-import CatalogChoice from '@features/CatalogChoice/CatalogChoice'
-import { Link } from 'react-router-dom'
-import './HeaderMenu.scss'
+import CatalogChoice from '@features/CatalogChoice'
+import { NavLink } from 'react-router-dom'
 import { ReactSVG } from 'react-svg'
+import classNames from 'classnames'
+import './HeaderMenu.scss'
 
 
-const HeaderMenu = () => {
+const HeaderMenu = (props) => {
+  const { className } = props
   return (
-    <nav className="header__menu">
+    <nav className={ classNames('header__menu', className) }>
       <ul className="header__menu-list">
         <li className="header__menu-item">
           <Tooltip
-            modifier="very-small"
-            renderTriggerComponent={ ( props = {} ) => (
+            className="tooltip__body--very-small"
+            renderTriggerComponent={ (props = {}) => (
               <Button
-                className="header__menu-button button--link"
+                className="header__menu-button button--link is-rotate"
                 { ...props }
               >
-                <ReactSVG src="images/icons/cart.svg"/>
                 Каталог
+                <ReactSVG src="images/icons/arrow.svg"/>
               </Button>
             ) }
           >
             <CatalogChoice/>
           </Tooltip>
         </li>
-        <li className="header__menu-item"><Link to="payment" className="header__menu-link">Доставка и
-          оплата</Link></li>
-        <li className="header__menu-item"><Link to="about" className="header__menu-link">О компании</Link></li>
+        <li className="header__menu-item">
+          <NavLink to="payment" className="header__menu-link">Доставка и оплата</NavLink>
+        </li>
+        <li className="header__menu-item">
+          <NavLink to="about" className="header__menu-link">О компании</NavLink>
+        </li>
       </ul>
     </nav>
   )

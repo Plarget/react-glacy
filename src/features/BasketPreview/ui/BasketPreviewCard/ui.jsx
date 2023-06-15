@@ -1,9 +1,9 @@
-import { cartSlice } from '@/app/store/reducers/CartSice'
+import { cartSlice } from '@shared/store/reducers/CartSice'
 import { useDispatch } from 'react-redux'
 import './BasketPreviewCard.scss'
 
 
-const BasketPreviewCard = ( props ) => {
+const BasketPreviewCard = (props) => {
   const { id, product } = props
   const { name, amount, price, img } = product
   const { deleteFromCart } = cartSlice.actions
@@ -19,7 +19,7 @@ const BasketPreviewCard = ( props ) => {
       </div>
       <div className="basket-card__actions">
         <div className="basket-card__price">{ amount * price } ₽</div>
-        <button className="basket-card__button" onClick={ () => dispatch( deleteFromCart( id ) ) }
+        <button className="basket-card__button" onClick={ () => dispatch(deleteFromCart(id)) }
                 aria-label="delete the product">
             <span title="delete the product">
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
