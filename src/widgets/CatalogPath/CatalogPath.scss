@@ -1,0 +1,33 @@
+.catalog-path {
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 28px;
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    position: relative;
+    &:not(:last-child):after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -17px;
+      width: 7px;
+      height: 6px;
+      background: url("~@assets/icons/arrows.svg");
+
+    }
+  }
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}

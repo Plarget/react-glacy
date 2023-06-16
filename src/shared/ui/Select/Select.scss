@@ -1,0 +1,32 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  position: relative;
+
+  &__label {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 16px;
+  }
+
+  &__control {
+    background-color: rgba(252, 252, 252, 0.3);
+    padding: 0 16px;
+    border-radius: 20px;
+    height: 36px;
+    width: 100%;
+   }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
+
+}

@@ -85,6 +85,11 @@ a {
   }
 }
 
+.react-svg > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (min-width: 1025px) {
   .visible-mobile {
