@@ -5,10 +5,9 @@ import HeaderMenu from '@widgets/Layout/ui/Header/ui/HeaderMenu'
 import HeaderActions from '@widgets/Layout/ui/Header/ui/HeaderActions'
 import HeaderMobileMenu from '@widgets/Layout/ui/Header/ui/HeaderMobileMenu/ui'
 import useToggle from '@shared/hooks/useToggle'
-import { useRef } from 'react'
 import useBodyLock from '@shared/hooks/useBodyLock'
+import { useRef } from 'react'
 import './Header.scss'
-
 
 
 const Header = () => {

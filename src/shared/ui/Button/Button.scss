@@ -14,7 +14,15 @@
 
   transition: 0.3s;
 
-  & > div > div{
+  &--biger {
+    height: 36px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    border: 2px solid #FCFCFC;
+  }
+
+  & > div > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,12 +33,14 @@
     background-color: transparent;
 
   }
+
   $borderButton: 4px;
+
   &--red {
 
     background-clip: padding-box;
     height: 44px + calc($borderButton * 2);
-    background-color:  #FF2F64;
+    background-color: #FF2F64;
     box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
     min-width: 113px + $borderButton;
     border: $borderButton solid #FF2F644D;
@@ -42,11 +52,12 @@
     font-weight: 700;
     color: #ffffff;
   }
+
   &--white {
 
     background-clip: padding-box;
     height: 44px + calc($borderButton * 2);
-    background-color:  #FCFCFC;
+    background-color: #FCFCFC;
     box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
     padding: 0 32px;
     border: $borderButton solid rgba(252, 252, 252, 0.4);
@@ -64,10 +75,12 @@
     padding-left: 9px;
     padding-right: 9px;
     background-color: #FF2F64;
+
     & svg path {
       fill: #ffffff;
     }
   }
+
   &:hover {
     opacity: 0.6;
   }

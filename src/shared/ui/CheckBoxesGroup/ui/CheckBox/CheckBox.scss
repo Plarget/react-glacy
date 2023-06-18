@@ -1,0 +1,21 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  &__label {
+    padding-left: 8px;
+  }
+
+  &__control {
+    appearance: none;
+    border: 1.33px solid #2D3440;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+
+    &:checked {
+      border: none;
+      background: url("~@assets/icons/checkbox.svg") no-repeat;
+    }
+  }
+}

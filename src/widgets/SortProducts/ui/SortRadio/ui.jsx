@@ -11,10 +11,27 @@ const SortRadio = (props) => {
       id='radio'
       label='Жирность:'
       radios={[
-        {value: 'zero', text: '0%'},
-        {value: 'beforeTen', text: 'до 10%', checked: true},
-        {value: 'beforeThirty', text: 'до 30%'},
-        {value: 'afterThirty', text: 'выше 30%'},
+        {
+          id: 'fat-0',
+          value: '0%',
+          text: '0%'
+        },
+        {
+          id: 'fat-1',
+          value: 'beforeTen',
+          text: 'до 10%',
+          isChecked: true
+        },
+        {
+          id: 'fat-2',
+          value: '< 10%',
+          text: 'до 30%'
+        },
+        {
+          id: 'fat-3',
+          value: '> 30%',
+          text: 'выше 30%'
+        },
       ]}
     />
   )

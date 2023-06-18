@@ -1,5 +1,6 @@
-import './RadioButtons.scss'
 import classNames from 'classnames'
+import { useState } from 'react'
+import './RadioButtons.scss'
 
 
 const RadioButtons = (props) => {
@@ -7,28 +8,30 @@ const RadioButtons = (props) => {
     className,
     register,
     registerName,
-    id,
     label,
     radios
   } = props
+
+  const defaultCheckedRadio = radios.find(({ isChecked }) => isChecked) || radios[0]
+  const [checkedRadioId, setCheckedRadioId] = useState(defaultCheckedRadio.id)
+
   return (
-    <div className={classNames('radio', className)}>
+    <div className={ classNames('radio', className) }>
       { label && <label className="radio__label">{ label }</label> }
       <div className="radio__body">
-        { radios.map((element, index) => {
-          const idForElement = id + index
+        { radios.map((element) => {
           return (
-            <div className='radio__wrapper'>
+            <div className="radio__wrapper" key={ element.id }>
               <input
                 className="radio__control"
                 { ...register(registerName) }
-                key={ index }
-                id={ idForElement }
-                value={element.value}
+                id={ element.id }
+                value={ element.value }
                 type="radio"
-                checked={element.checked}
+                checked={ element.id === checkedRadioId }
+                onChange={ () => setCheckedRadioId(element.id)}
               />
-              <label className="radio__control-label" htmlFor={ idForElement }>{ element.text }</label>
+              <label className="radio__control-label" htmlFor={ element.id }>{ element.text }</label>
             </div> )
         }) }
       </div>

@@ -2,9 +2,8 @@ import AddressWindow from '@shared/ui/AddressWindow'
 import { useRef, useState } from 'react'
 import Popup from '@shared/ui/Popup'
 import Feedback from '@features/Feedback'
-import { lock, unlock } from 'tua-body-scroll-lock'
-import './MainAddress.scss'
 import useBodyLock from '@shared/hooks/useBodyLock'
+import './MainAddress.scss'
 
 
 const MainAddress = () => {
@@ -23,7 +22,7 @@ const MainAddress = () => {
         <div className="address__body">
           <AddressWindow togglePopup={ togglePopup }/>
           { popup &&
-            <Popup togglePopup={ togglePopup } ref={ref}>
+            <Popup togglePopup={ togglePopup } ref={ ref }>
               <Feedback/>
             </Popup> }
         </div>

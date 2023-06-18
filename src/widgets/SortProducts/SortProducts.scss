@@ -1,7 +1,29 @@
 .sort-products {
 
+    font-size: 14px;
+
   &__form {
-    display: grid;
-    grid-template-columns: 196px 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    max-width: 823px;
+    column-gap: 24px;
+    row-gap: 16px;
+    @media (max-width: 853px) {
+      justify-content: center;
+    }
   }
+
+  &__select {
+    flex: 1 0 196px;
+  }
+
+  &__range-slider {
+    flex: 1 0 196px;
+  }
+
+  &__button {
+    width: 185px;
+   }
+
 }

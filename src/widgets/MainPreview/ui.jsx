@@ -1,6 +1,6 @@
 import Button from '@shared/ui/Button/ui'
 import { SwiperSlide } from 'swiper/react'
-import { Slider } from '@shared/ui/Slider/Slider'
+import Slider from '@shared/ui/Slider'
 import ProductBannerCard from '@shared/ui/ProductBannerCard'
 import './MainPreview.scss'
 import 'swiper/css'

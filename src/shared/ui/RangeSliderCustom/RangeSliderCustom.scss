@@ -1,0 +1,46 @@
+.range-slider-custom {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  &__body {
+    background-color: rgba(252, 252, 252, 0.3);
+    border-radius: 20px;
+    padding: 0 16px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    line-height: 20px;
+    padding-left: 16px;
+  }
+
+  &__control {
+    height: 2px;
+    background-color: rgba(86, 92, 102, 0.3);
+
+    & .range-slider__range {
+      background: #565C66;
+    }
+
+    & .range-slider__thumb {
+      width: 16px;
+      height: 16px;
+      background: #2D3440;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #FCFCFC;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

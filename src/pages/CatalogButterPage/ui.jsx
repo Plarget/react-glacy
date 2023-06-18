@@ -1,5 +1,6 @@
 import CatalogPath from '@widgets/CatalogPath'
 import SortProducts from '@widgets/SortProducts'
+import CatalogProducts from '@widgets/CatalogProducts'
 
 
 const CatalogButterPage = () => {
@@ -7,6 +8,7 @@ const CatalogButterPage = () => {
     <>
       <CatalogPath/>
       <SortProducts/>
+      <CatalogProducts/>
     </>
   )
 }

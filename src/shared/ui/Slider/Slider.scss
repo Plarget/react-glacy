@@ -1,0 +1,15 @@
+.prev {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: black;
+  z-index: 3;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  background-color: black;
+  z-index: 3;
+}
