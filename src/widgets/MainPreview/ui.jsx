@@ -4,6 +4,7 @@ import Slider from '@shared/ui/Slider'
 import ProductBannerCard from '@shared/ui/ProductBannerCard'
 import './MainPreview.scss'
 import 'swiper/css'
+import { Pagination } from 'swiper'
 
 
 const MainPreview = () => {
@@ -18,7 +19,14 @@ const MainPreview = () => {
           <Button className="preview__button button--white">Заказать</Button>
         </article>
 
-        <Slider>
+        <Slider
+          modules={ [Pagination] }
+          pagination={ { clickable: true } }
+          slidesPerView={ 3 }
+        >
+          <SwiperSlide><ProductBannerCard/></SwiperSlide>
+          <SwiperSlide><ProductBannerCard/></SwiperSlide>
+          <SwiperSlide><ProductBannerCard/></SwiperSlide>
           <SwiperSlide><ProductBannerCard/></SwiperSlide>
           <SwiperSlide><ProductBannerCard/></SwiperSlide>
           <SwiperSlide><ProductBannerCard/></SwiperSlide>

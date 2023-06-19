@@ -28,7 +28,7 @@ const ProductCard = (props) => {
             notification()
           } }
         >
-          <ReactSVG src="images/icons/cart.svg"/>
+          <ReactSVG src="/images/icons/cart.svg"/>
         </Button>
       </div>
     </div>

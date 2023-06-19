@@ -3,9 +3,17 @@ import './IconButton.scss'
 
 
 const IconButton = (props) => {
-  const { className, children } = props
+  const {
+    className,
+    children,
+    ...rest
+  } = props
   return (
-    <button className={ classNames('icon-button', className) }>{ children }</button>
+    <button
+      className={ classNames('icon-button', className) }
+      { ...rest }
+    >{ children }
+    </button>
   )
 }
 

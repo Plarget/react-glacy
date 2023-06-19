@@ -1,14 +1,14 @@
 import { Swiper } from 'swiper/react'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import './Slider.scss'
 import { useRef } from 'react'
-import { Navigation } from 'swiper'
+import SliderNavigation from '@shared/ui/Slider/ui/SliderNavigation'
+import './Slider.scss'
+import { ReactSVG } from 'react-svg'
 
 
 const Slider = (props) => {
   const {
     children,
+    classNameNavigation,
     ...rest
   } = props
 
@@ -19,19 +19,21 @@ const Slider = (props) => {
     <>
 
       <Swiper
-        modules={ [Navigation] }
         onBeforeInit={ (swiper) => {
           swiperRef.current = swiper
         } }
-
+ 
         { ...rest }
       >
         { children }
+
       </Swiper>
-      <div>
-        <button className="prev" onClick={ () => swiperRef.current?.slidePrev() }>das</button>
-        <button className="next" onClick={ () => swiperRef.current?.slideNext() }>dd</button>
-      </div>
+      <SliderNavigation
+        className={classNameNavigation}
+        swiperRef={ swiperRef }
+      >
+        <ReactSVG className="react-svg" src="/images/icons/arrow-right.svg"/>
+      </SliderNavigation>
     </>
   )
 }
