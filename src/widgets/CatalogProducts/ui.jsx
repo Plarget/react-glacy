@@ -58,6 +58,7 @@ const CatalogProducts = () => {
               <Slider
                 classNameNavigation="catalog-products__navigation"
                 slidesPerView={ Math.min(pagesCount, 5) }
+                hasNavigation
               >
                 { pagesProducts.map((element) => {
                   return (

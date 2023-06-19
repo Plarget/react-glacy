@@ -9,6 +9,7 @@ const Slider = (props) => {
   const {
     children,
     classNameNavigation,
+    hasNavigation,
     ...rest
   } = props
 
@@ -22,18 +23,18 @@ const Slider = (props) => {
         onBeforeInit={ (swiper) => {
           swiperRef.current = swiper
         } }
- 
+
         { ...rest }
       >
         { children }
 
       </Swiper>
-      <SliderNavigation
-        className={classNameNavigation}
+      { hasNavigation && <SliderNavigation
+        className={ classNameNavigation }
         swiperRef={ swiperRef }
       >
         <ReactSVG className="react-svg" src="/images/icons/arrow-right.svg"/>
-      </SliderNavigation>
+      </SliderNavigation> }
     </>
   )
 }

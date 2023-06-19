@@ -18,7 +18,7 @@ const BasketPreviewCard = (props) => {
         </div>
       </div>
       <div className="basket-card__actions">
-        <div className="basket-card__price">{ amount * price } ₽</div>
+        <div className="basket-card__price">{ amount * price }&nbsp;₽</div>
         <button className="basket-card__button" onClick={ () => dispatch(deleteFromCart(id)) }
                 aria-label="delete the product">
             <span title="delete the product">

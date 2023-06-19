@@ -1,5 +1,5 @@
-import './SliderNavigation.scss'
 import classNames from 'classnames'
+import './SliderNavigation.scss'
 
 
 const SliderNavigation = (props) => {
@@ -8,19 +8,26 @@ const SliderNavigation = (props) => {
     children,
     className,
   } = props
+
   return (
     <div className="slider-navigation">
       <button
-        className={ classNames('slider-navigation__prev', `${className}__prev`) }
+        className={ classNames('slider-navigation__prev', `${ className }__prev`) }
         onClick={ () => swiperRef.current?.slidePrev() }
+        aria-label="to prev slide"
       >
-        { children }
+        <span title="prev slide">
+           { children }
+        </span>
       </button>
       <button
-        className={ classNames('slider-navigation__next', `${className}__next`) }
+        className={ classNames('slider-navigation__next', `${ className }__next`) }
         onClick={ () => swiperRef.current?.slideNext() }
+        aria-label="to next slide"
       >
-        { children }
+        <span title="next slide">
+         { children }
+        </span>
       </button>
     </div>
   )

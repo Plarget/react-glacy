@@ -1,7 +1,8 @@
 import './ProductBannerCard.scss'
 
 
-const ProductBannerCard = () => {
+const ProductBannerCard = (props) => {
+  const { img } = props
   return (
     <div className="product-banner-card">
       <img
@@ -9,7 +10,7 @@ const ProductBannerCard = () => {
         height="507"
         width="327"
         loading="lazy"
-        src="/images/slides/IceCream01.png"
+        src={ img }
         alt="Icecream"
       />
     </div>

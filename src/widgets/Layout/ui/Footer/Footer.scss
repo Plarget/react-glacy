@@ -12,17 +12,6 @@
     }
   }
 
-  &__social {
-    display: flex;
-    column-gap: 14px;
-
-    &-link svg {
-      border: 2px solid rgba(252, 252, 252, 0.3);
-      border-radius: 50%;
-    }
-
-  }
-
   &__provider {
     display: grid;
     grid-template-columns: auto auto;

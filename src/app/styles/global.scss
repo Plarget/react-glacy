@@ -10,10 +10,18 @@ body {
   color: #2D3440;
   background-color: #FEAFC3;
   font-family: 'Inter';
+  transition: background-color 0.3s;
 
-
-  &.body--blue {
+  &.is-blue {
     background-color: #69A9FF;
+  }
+
+  &.is-yellow {
+    background-color: #FCC850;
+  }
+
+  &.is-pink {
+    background-color: #FEAFC3;
   }
 }
 
